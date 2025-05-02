@@ -1,0 +1,45 @@
+\doxysection{apiclient.\+h}
+\hypertarget{apiclient_8h_source}{}\label{apiclient_8h_source}\mbox{\hyperlink{apiclient_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ APICLIENT\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ APICLIENT\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QtNetwork/QNetworkAccessManager>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QtNetwork/QNetworkReply>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QtConcurrent/QtConcurrent>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QFuture>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{station_8h}{station.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{measurement_8h}{measurement.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_api_client_a7ac17ab761c4ee56fa63802573b343e3}{ApiClient}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_api_client_a7ac17ab761c4ee56fa63802573b343e3}{ApiClient}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ QFuture<QList<Station>>\ \mbox{\hyperlink{class_api_client_a9bce8b1aa4b4370b5e7143063579db79}{fetchAllStations}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ QFuture<QList<MeasurementStation>>\ \mbox{\hyperlink{class_api_client_a7938b0abaa400e7df34f331bfc5b9cbd}{fetchStationSensors}}(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ QFuture<MeasurementData>\ \mbox{\hyperlink{class_api_client_ac9e2caca79e2f5e5c3381365742d01c1}{fetchSensorData}}(\textcolor{keywordtype}{int}\ sensorId);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ QFuture<AirQualityIndex>\ \mbox{\hyperlink{class_api_client_a0529fa413b698d06a220cb196bb14f4e}{fetchAirQualityIndex}}(\textcolor{keywordtype}{int}\ stationId);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ signals:}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_api_client_a5f7c1ca909c82169cc3d9c0f940cd43c}{errorOccurred}}(\textcolor{keyword}{const}\ QString\ \&message);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ QNetworkAccessManager\ *manager;\ \textcolor{comment}{//\ Menadżer\ połączeń\ sieciowych}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{const}\ QString\ baseUrl\ =\ \textcolor{stringliteral}{"{}https://api.gios.gov.pl/pjp-\/api/rest"{}};\ \textcolor{comment}{//\ Bazowy\ URL\ API}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ QFuture<QJsonDocument>\ makeApiRequest(\textcolor{keyword}{const}\ QString\ \&endpoint);}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ APICLIENT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,14 @@
+# Wymagania systemowe dla projektu Pogoda
+
+# Wymagane wersje Qt
+Qt>=6.9.0
+QtCharts>=6.9.0
+QtNetwork>=6.9.0
+QtConcurrent>=6.9.0
+
+# Narzędzia developerskie
+CMake>=3.16
+Doxygen>=1.9.1  # dla dokumentacji
+
+# Testy jednostkowe
+QtTest>=6.9.0

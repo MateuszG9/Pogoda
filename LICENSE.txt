@@ -1,0 +1,5 @@
+MIT License
+
+Copyright (c) 2025 Mateusz Gnutek
+
+Permission is hereby granted...

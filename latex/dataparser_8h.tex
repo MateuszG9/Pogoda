@@ -1,0 +1,32 @@
+\doxysection{dataparser.\+h File Reference}
+\hypertarget{dataparser_8h}{}\label{dataparser_8h}\index{dataparser.h@{dataparser.h}}
+
+
+Definicja przestrzeni nazw \doxylink{namespace_data_parser}{Data\+Parser} do przetwarzania danych JSON.  
+
+
+{\ttfamily \#include $<$QJson\+Document$>$}\newline
+{\ttfamily \#include $<$QList$>$}\newline
+{\ttfamily \#include "{}station.\+h"{}}\newline
+{\ttfamily \#include "{}measurement.\+h"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_data_parser}{Data\+Parser}}
+\begin{DoxyCompactList}\small\item\em Przestrzeń nazw zawierająca funkcje do parsowania danych JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ \mbox{\hyperlink{struct_station}{Station}} $>$ \mbox{\hyperlink{namespace_data_parser_a7be1bd643521b330f553d4e91c9f4ef9}{Data\+Parser\+::parse\+Stations}} (const QJson\+Document \&json)
+\begin{DoxyCompactList}\small\item\em Parsuje listę stacji z dokumentu JSON. \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{struct_measurement_station}{Measurement\+Station}} $>$ \mbox{\hyperlink{namespace_data_parser_a0b13b910bae28076f90def8e1831f1ba}{Data\+Parser\+::parse\+Sensors}} (const QJson\+Document \&json)
+\begin{DoxyCompactList}\small\item\em Parsuje listę czujników z dokumentu JSON. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_measurement_data}{Measurement\+Data}} \mbox{\hyperlink{namespace_data_parser_a487ca15c0d56b8b6a0bc418456afe7ff}{Data\+Parser\+::parse\+Sensor\+Data}} (const QJson\+Document \&json)
+\begin{DoxyCompactList}\small\item\em Parsuje dane pomiarowe z dokumentu JSON. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_air_quality_index}{Air\+Quality\+Index}} \mbox{\hyperlink{namespace_data_parser_abda046f742e20435af493187fcc36fef}{Data\+Parser\+::parse\+Air\+Quality\+Index}} (const QJson\+Document \&json)
+\begin{DoxyCompactList}\small\item\em Parsuje indeks jakości powietrza z dokumentu JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definicja przestrzeni nazw \doxylink{namespace_data_parser}{Data\+Parser} do przetwarzania danych JSON. 
+

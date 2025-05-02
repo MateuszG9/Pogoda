@@ -1,0 +1,62 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QtCharts/QChartView>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QtCharts/QLineSeries>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QtCharts/QChart>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{apiclient_8h}{apiclient.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{datamanager_8h}{datamanager.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }Ui\ \{\ \textcolor{keyword}{class\ }MainWindow;\ \}}
+\DoxyCodeLine{00017\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_fetchStationsButton\_clicked();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ onStationSelected(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ onSensorSelected(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ onFetchDataClicked();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ onSaveDataClicked();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ onShowChartClicked();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ onAnalyzeDataClicked();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ onApiError(\textcolor{keyword}{const}\ QString\ \&message);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00070\ \ \ \ \ Ui::MainWindow\ *ui;\ \textcolor{comment}{//\ Wskaźnik\ na\ interfejs\ użytkownika}}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_api_client}{ApiClient}}\ *apiClient;\ \textcolor{comment}{//\ Wskaźnik\ na\ klienta\ API}}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_data_manager}{DataManager}}\ *dataManager;\ \textcolor{comment}{//Wskaźnik\ na\ menadżera\ danych}}
+\DoxyCodeLine{00073\ \ \ \ \ QList<Station>\ currentStations;\ \textcolor{comment}{//Lista\ aktualnie\ załadowanych\ stacji}}
+\DoxyCodeLine{00074\ \ \ \ \ QList<MeasurementStation>\ currentSensors;\ \textcolor{comment}{//Lista\ aktualnie\ załadowanych\ czujników}}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{struct_measurement_data}{MeasurementData}}\ currentData;\ \textcolor{comment}{//\ Aktualnie\ załadowane\ dane\ pomiarowe}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ showChart(\textcolor{keyword}{const}\ QList<QPair<QDateTime,\ double>>\ \&data,\ \textcolor{keyword}{const}\ QString\ \&title);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ showAnalysis(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_measurement_data}{MeasurementData}}\ \&data);}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

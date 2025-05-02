@@ -1,0 +1,75 @@
+\doxysection{Data\+Manager Class Reference}
+\hypertarget{class_data_manager}{}\label{class_data_manager}\index{DataManager@{DataManager}}
+
+
+Klasa do zarządzania lokalnym przechowywaniem danych.  
+
+
+
+
+{\ttfamily \#include $<$datamanager.\+h$>$}
+
+Inheritance diagram for Data\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_data_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a}{Data\+Manager}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_data_manager}{Data\+Manager}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_manager_ac986c4533c7777037e416ad460ab2be4}{save\+Measurement\+Data}} (int station\+Id, int sensor\+Id, const \mbox{\hyperlink{struct_measurement_data}{Measurement\+Data}} \&data)
+\begin{DoxyCompactList}\small\item\em Zapisuje dane pomiarowe do pliku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa do zarządzania lokalnym przechowywaniem danych. 
+
+Klasa zapewnia funkcjonalność zapisu i odczytu danych w formacie JSON do plików na dysku. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a}\index{DataManager@{DataManager}!DataManager@{DataManager}}
+\index{DataManager@{DataManager}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{DataManager()}{DataManager()}}
+{\footnotesize\ttfamily \label{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a} 
+Data\+Manager\+::\+Data\+Manager (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor klasy \doxylink{class_data_manager}{Data\+Manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Wskaźnik na obiekt rodzica \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_manager_ac986c4533c7777037e416ad460ab2be4}\index{DataManager@{DataManager}!saveMeasurementData@{saveMeasurementData}}
+\index{saveMeasurementData@{saveMeasurementData}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{saveMeasurementData()}{saveMeasurementData()}}
+{\footnotesize\ttfamily \label{class_data_manager_ac986c4533c7777037e416ad460ab2be4} 
+void Data\+Manager\+::save\+Measurement\+Data (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{, }\item[{int}]{sensor\+Id}{, }\item[{const \mbox{\hyperlink{struct_measurement_data}{Measurement\+Data}} \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Zapisuje dane pomiarowe do pliku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji \\
+\hline
+{\em sensor\+Id} & ID czujnika \\
+\hline
+{\em data} & Dane pomiarowe do zapisania \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{datamanager_8h}{datamanager.\+h}}\item 
+datamanager.\+cpp\end{DoxyCompactItemize}

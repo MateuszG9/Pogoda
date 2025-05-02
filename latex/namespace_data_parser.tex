@@ -1,0 +1,96 @@
+\doxysection{Data\+Parser Namespace Reference}
+\hypertarget{namespace_data_parser}{}\label{namespace_data_parser}\index{DataParser@{DataParser}}
+
+
+Przestrzeń nazw zawierająca funkcje do parsowania danych JSON.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ \mbox{\hyperlink{struct_station}{Station}} $>$ \mbox{\hyperlink{namespace_data_parser_a7be1bd643521b330f553d4e91c9f4ef9}{parse\+Stations}} (const QJson\+Document \&json)
+\begin{DoxyCompactList}\small\item\em Parsuje listę stacji z dokumentu JSON. \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{struct_measurement_station}{Measurement\+Station}} $>$ \mbox{\hyperlink{namespace_data_parser_a0b13b910bae28076f90def8e1831f1ba}{parse\+Sensors}} (const QJson\+Document \&json)
+\begin{DoxyCompactList}\small\item\em Parsuje listę czujników z dokumentu JSON. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_measurement_data}{Measurement\+Data}} \mbox{\hyperlink{namespace_data_parser_a487ca15c0d56b8b6a0bc418456afe7ff}{parse\+Sensor\+Data}} (const QJson\+Document \&json)
+\begin{DoxyCompactList}\small\item\em Parsuje dane pomiarowe z dokumentu JSON. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_air_quality_index}{Air\+Quality\+Index}} \mbox{\hyperlink{namespace_data_parser_abda046f742e20435af493187fcc36fef}{parse\+Air\+Quality\+Index}} (const QJson\+Document \&json)
+\begin{DoxyCompactList}\small\item\em Parsuje indeks jakości powietrza z dokumentu JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Przestrzeń nazw zawierająca funkcje do parsowania danych JSON. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_data_parser_abda046f742e20435af493187fcc36fef}\index{DataParser@{DataParser}!parseAirQualityIndex@{parseAirQualityIndex}}
+\index{parseAirQualityIndex@{parseAirQualityIndex}!DataParser@{DataParser}}
+\doxysubsubsection{\texorpdfstring{parseAirQualityIndex()}{parseAirQualityIndex()}}
+{\footnotesize\ttfamily \label{namespace_data_parser_abda046f742e20435af493187fcc36fef} 
+\mbox{\hyperlink{struct_air_quality_index}{Air\+Quality\+Index}} Data\+Parser\+::parse\+Air\+Quality\+Index (\begin{DoxyParamCaption}\item[{const QJson\+Document \&}]{json}{}\end{DoxyParamCaption})}
+
+
+
+Parsuje indeks jakości powietrza z dokumentu JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & Dokument JSON \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Indeks jakości powietrza 
+\end{DoxyReturn}
+\Hypertarget{namespace_data_parser_a487ca15c0d56b8b6a0bc418456afe7ff}\index{DataParser@{DataParser}!parseSensorData@{parseSensorData}}
+\index{parseSensorData@{parseSensorData}!DataParser@{DataParser}}
+\doxysubsubsection{\texorpdfstring{parseSensorData()}{parseSensorData()}}
+{\footnotesize\ttfamily \label{namespace_data_parser_a487ca15c0d56b8b6a0bc418456afe7ff} 
+\mbox{\hyperlink{struct_measurement_data}{Measurement\+Data}} Data\+Parser\+::parse\+Sensor\+Data (\begin{DoxyParamCaption}\item[{const QJson\+Document \&}]{json}{}\end{DoxyParamCaption})}
+
+
+
+Parsuje dane pomiarowe z dokumentu JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & Dokument JSON \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dane pomiarowe 
+\end{DoxyReturn}
+\Hypertarget{namespace_data_parser_a0b13b910bae28076f90def8e1831f1ba}\index{DataParser@{DataParser}!parseSensors@{parseSensors}}
+\index{parseSensors@{parseSensors}!DataParser@{DataParser}}
+\doxysubsubsection{\texorpdfstring{parseSensors()}{parseSensors()}}
+{\footnotesize\ttfamily \label{namespace_data_parser_a0b13b910bae28076f90def8e1831f1ba} 
+QList$<$ \mbox{\hyperlink{struct_measurement_station}{Measurement\+Station}} $>$ Data\+Parser\+::parse\+Sensors (\begin{DoxyParamCaption}\item[{const QJson\+Document \&}]{json}{}\end{DoxyParamCaption})}
+
+
+
+Parsuje listę czujników z dokumentu JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & Dokument JSON \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista czujników 
+\end{DoxyReturn}
+\Hypertarget{namespace_data_parser_a7be1bd643521b330f553d4e91c9f4ef9}\index{DataParser@{DataParser}!parseStations@{parseStations}}
+\index{parseStations@{parseStations}!DataParser@{DataParser}}
+\doxysubsubsection{\texorpdfstring{parseStations()}{parseStations()}}
+{\footnotesize\ttfamily \label{namespace_data_parser_a7be1bd643521b330f553d4e91c9f4ef9} 
+QList$<$ \mbox{\hyperlink{struct_station}{Station}} $>$ Data\+Parser\+::parse\+Stations (\begin{DoxyParamCaption}\item[{const QJson\+Document \&}]{json}{}\end{DoxyParamCaption})}
+
+
+
+Parsuje listę stacji z dokumentu JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & Dokument JSON \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista stacji 
+\end{DoxyReturn}

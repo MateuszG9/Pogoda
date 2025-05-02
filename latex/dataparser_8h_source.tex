@@ -1,0 +1,26 @@
+\doxysection{dataparser.\+h}
+\hypertarget{dataparser_8h_source}{}\label{dataparser_8h_source}\mbox{\hyperlink{dataparser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ DATAPARSER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ DATAPARSER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{station_8h}{station.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{measurement_8h}{measurement.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_data_parser}{DataParser}}\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \ \ \ \ QList<Station>\ \mbox{\hyperlink{namespace_data_parser_a7be1bd643521b330f553d4e91c9f4ef9}{parseStations}}(\textcolor{keyword}{const}\ QJsonDocument\ \&json);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ QList<MeasurementStation>\ \mbox{\hyperlink{namespace_data_parser_a0b13b910bae28076f90def8e1831f1ba}{parseSensors}}(\textcolor{keyword}{const}\ QJsonDocument\ \&json);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ MeasurementData\ \mbox{\hyperlink{namespace_data_parser_a487ca15c0d56b8b6a0bc418456afe7ff}{parseSensorData}}(\textcolor{keyword}{const}\ QJsonDocument\ \&json);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ AirQualityIndex\ \mbox{\hyperlink{namespace_data_parser_abda046f742e20435af493187fcc36fef}{parseAirQualityIndex}}(\textcolor{keyword}{const}\ QJsonDocument\ \&json);}
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATAPARSER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,149 @@
+\doxysection{Api\+Client Class Reference}
+\hypertarget{class_api_client}{}\label{class_api_client}\index{ApiClient@{ApiClient}}
+
+
+Klasa odpowiedzialna za komunikacje z API GIOS.  
+
+
+
+
+{\ttfamily \#include $<$apiclient.\+h$>$}
+
+Inheritance diagram for Api\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_api_client}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_api_client_a5f7c1ca909c82169cc3d9c0f940cd43c}{error\+Occurred}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Sygnał emitowany w przypadku błędu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_api_client_a7ac17ab761c4ee56fa63802573b343e3}{Api\+Client}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_api_client}{Api\+Client}. \end{DoxyCompactList}\item 
+QFuture$<$ QList$<$ \mbox{\hyperlink{struct_station}{Station}} $>$ $>$ \mbox{\hyperlink{class_api_client_a9bce8b1aa4b4370b5e7143063579db79}{fetch\+All\+Stations}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera listę wszystkich stacji pomiarowych. \end{DoxyCompactList}\item 
+QFuture$<$ QList$<$ \mbox{\hyperlink{struct_measurement_station}{Measurement\+Station}} $>$ $>$ \mbox{\hyperlink{class_api_client_a7938b0abaa400e7df34f331bfc5b9cbd}{fetch\+Station\+Sensors}} (int station\+Id)
+\begin{DoxyCompactList}\small\item\em Pobiera stanowiska pomiarowe dla danej stacji. \end{DoxyCompactList}\item 
+QFuture$<$ \mbox{\hyperlink{struct_measurement_data}{Measurement\+Data}} $>$ \mbox{\hyperlink{class_api_client_ac9e2caca79e2f5e5c3381365742d01c1}{fetch\+Sensor\+Data}} (int sensor\+Id)
+\begin{DoxyCompactList}\small\item\em Pobiera dane pomiarowe dla danego czujnika. \end{DoxyCompactList}\item 
+QFuture$<$ \mbox{\hyperlink{struct_air_quality_index}{Air\+Quality\+Index}} $>$ \mbox{\hyperlink{class_api_client_a0529fa413b698d06a220cb196bb14f4e}{fetch\+Air\+Quality\+Index}} (int station\+Id)
+\begin{DoxyCompactList}\small\item\em Pobiera indeks jakości powietrza dla stacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa odpowiedzialna za komunikacje z API GIOS. 
+
+Klasa wykorzystuje QNetwork\+Access\+Manager do wysyłania żądań HTTP i zwraca dane w postaci obiektów QFuture dla asynchronicznego przetwarzania. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_api_client_a7ac17ab761c4ee56fa63802573b343e3}\index{ApiClient@{ApiClient}!ApiClient@{ApiClient}}
+\index{ApiClient@{ApiClient}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{ApiClient()}{ApiClient()}}
+{\footnotesize\ttfamily \label{class_api_client_a7ac17ab761c4ee56fa63802573b343e3} 
+Api\+Client\+::\+Api\+Client (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor klasy \doxylink{class_api_client}{Api\+Client}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Wskaźnik na obiekt rodzica (domyślnie nullptr) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_api_client_a5f7c1ca909c82169cc3d9c0f940cd43c}\index{ApiClient@{ApiClient}!errorOccurred@{errorOccurred}}
+\index{errorOccurred@{errorOccurred}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{errorOccurred}{errorOccurred}}
+{\footnotesize\ttfamily \label{class_api_client_a5f7c1ca909c82169cc3d9c0f940cd43c} 
+void Api\+Client\+::error\+Occurred (\begin{DoxyParamCaption}\item[{const QString \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Sygnał emitowany w przypadku błędu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Komunikat błędu \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_api_client_a0529fa413b698d06a220cb196bb14f4e}\index{ApiClient@{ApiClient}!fetchAirQualityIndex@{fetchAirQualityIndex}}
+\index{fetchAirQualityIndex@{fetchAirQualityIndex}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{fetchAirQualityIndex()}{fetchAirQualityIndex()}}
+{\footnotesize\ttfamily \label{class_api_client_a0529fa413b698d06a220cb196bb14f4e} 
+QFuture$<$ \mbox{\hyperlink{struct_air_quality_index}{Air\+Quality\+Index}} $>$ Api\+Client\+::fetch\+Air\+Quality\+Index (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera indeks jakości powietrza dla stacji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QFuture$<$\+Air\+Quality\+Index$>$ -\/ przyszły wynik z indeksem jakości powietrza 
+\end{DoxyReturn}
+\Hypertarget{class_api_client_a9bce8b1aa4b4370b5e7143063579db79}\index{ApiClient@{ApiClient}!fetchAllStations@{fetchAllStations}}
+\index{fetchAllStations@{fetchAllStations}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{fetchAllStations()}{fetchAllStations()}}
+{\footnotesize\ttfamily \label{class_api_client_a9bce8b1aa4b4370b5e7143063579db79} 
+QFuture$<$ QList$<$ \mbox{\hyperlink{struct_station}{Station}} $>$ $>$ Api\+Client\+::fetch\+All\+Stations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera listę wszystkich stacji pomiarowych. 
+
+\begin{DoxyReturn}{Returns}
+QFuture$<$\+QList$<$\+Station$>$$>$ -\/ przyszły wynik z listą stacji 
+\end{DoxyReturn}
+\Hypertarget{class_api_client_ac9e2caca79e2f5e5c3381365742d01c1}\index{ApiClient@{ApiClient}!fetchSensorData@{fetchSensorData}}
+\index{fetchSensorData@{fetchSensorData}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{fetchSensorData()}{fetchSensorData()}}
+{\footnotesize\ttfamily \label{class_api_client_ac9e2caca79e2f5e5c3381365742d01c1} 
+QFuture$<$ \mbox{\hyperlink{struct_measurement_data}{Measurement\+Data}} $>$ Api\+Client\+::fetch\+Sensor\+Data (\begin{DoxyParamCaption}\item[{int}]{sensor\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera dane pomiarowe dla danego czujnika. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Id} & ID czujnika \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QFuture$<$\+Measurement\+Data$>$ -\/ przyszły wynik z danymi pomiarowymi 
+\end{DoxyReturn}
+\Hypertarget{class_api_client_a7938b0abaa400e7df34f331bfc5b9cbd}\index{ApiClient@{ApiClient}!fetchStationSensors@{fetchStationSensors}}
+\index{fetchStationSensors@{fetchStationSensors}!ApiClient@{ApiClient}}
+\doxysubsubsection{\texorpdfstring{fetchStationSensors()}{fetchStationSensors()}}
+{\footnotesize\ttfamily \label{class_api_client_a7938b0abaa400e7df34f331bfc5b9cbd} 
+QFuture$<$ QList$<$ \mbox{\hyperlink{struct_measurement_station}{Measurement\+Station}} $>$ $>$ Api\+Client\+::fetch\+Station\+Sensors (\begin{DoxyParamCaption}\item[{int}]{station\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Pobiera stanowiska pomiarowe dla danej stacji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station\+Id} & ID stacji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QFuture$<$\+QList$<$\+Measurement\+Station$>$$>$ -\/ przyszły wynik z listą czujników 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{apiclient_8h}{apiclient.\+h}}\item 
+apiclient.\+cpp\end{DoxyCompactItemize}

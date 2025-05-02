@@ -1,0 +1,27 @@
+\doxysection{datamanager.\+h}
+\hypertarget{datamanager_8h_source}{}\label{datamanager_8h_source}\mbox{\hyperlink{datamanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ DATAMANAGER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ DATAMANAGER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{measurement_8h}{measurement.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a}{DataManager}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_data_manager_affb37dc13db06ecf6853c9fa25e5ed7a}{DataManager}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_data_manager_ac986c4533c7777037e416ad460ab2be4}{saveMeasurementData}}(\textcolor{keywordtype}{int}\ stationId,\ \textcolor{keywordtype}{int}\ sensorId,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_measurement_data}{MeasurementData}}\ \&data);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ QString\ getFilePath(\textcolor{keywordtype}{int}\ stationId,\ \textcolor{keywordtype}{int}\ sensorId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATAMANAGER\_H}}
+
+\end{DoxyCode}

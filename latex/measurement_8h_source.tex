@@ -1,0 +1,34 @@
+\doxysection{measurement.\+h}
+\hypertarget{measurement_8h_source}{}\label{measurement_8h_source}\mbox{\hyperlink{measurement_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ MEASUREMENT\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ MEASUREMENT\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QPair>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_measurement_data}{MeasurementData}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ QString\ parameterName;\ \textcolor{comment}{//Nazwa\ parametru}}
+\DoxyCodeLine{00018\ \ \ \ \ QString\ parameterCode;\ \textcolor{comment}{//Kod\ parametru}}
+\DoxyCodeLine{00019\ \ \ \ \ QList<QPair<QDateTime,\ double>>\ values;\ \textcolor{comment}{//\ Lista\ wartości\ pomiarowych\ z\ datami}}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_air_quality_index}{AirQualityIndex}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ stationId;\ \textcolor{comment}{//\ ID\ stacji}}
+\DoxyCodeLine{00028\ \ \ \ \ QDateTime\ calculationDate;\ \textcolor{comment}{//Data\ obliczenia}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ indexLevel;\ \textcolor{comment}{//Poziom\ indeksu}}
+\DoxyCodeLine{00030\ \ \ \ \ QString\ indexLevelName;\ \textcolor{comment}{//\ Nazwa\ poziomu\ indeksu}}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_measurement_station}{MeasurementStation}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \textcolor{comment}{//ID\ stanowiska}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ stationId;\ \textcolor{comment}{//ID\ stacji}}
+\DoxyCodeLine{00040\ \ \ \ \ QString\ parameterName;\ \textcolor{comment}{//Nazwa\ mierzonego\ parametru}}
+\DoxyCodeLine{00041\ \ \ \ \ QString\ parameterCode;\ \textcolor{comment}{//\ Kod\ parametru}}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MEASUREMENT\_H}}
+
+\end{DoxyCode}
