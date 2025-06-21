@@ -11,7 +11,7 @@
 
 ApiClient::ApiClient(QObject *parent) : QObject(parent),
     manager(new QNetworkAccessManager(this)),
-    baseUrl("https://api.gios.gov.pl/pjp-api/rest")
+    baseUrl("https://api.gios.gov.pl/pjp-api/rest") // Bazowy URL -> strona GIOŚ
 {
 }
 
@@ -83,10 +83,13 @@ QFuture<QJsonDocument> ApiClient::makeApiRequest(const QString &endpoint)
         });
 
         try {
-            QUrl url(baseUrl + endpoint);
+            QUrl url(baseUrl + endpoint); // Bazowy URL + endpoint
             QNetworkRequest request(url);
+
+            //Ustawianie nagłówków
             request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
+            //Wysyłanie żądania GET
             reply = manager->get(request);
             timer.start(10000); // 10 sekund timeout
 
@@ -95,8 +98,9 @@ QFuture<QJsonDocument> ApiClient::makeApiRequest(const QString &endpoint)
                 emit errorOccurred(tr("Network error: ") + QString::number(code));
             });
 
-            loop.exec();
+            loop.exec(); // Oczekiwanie na odpowiedź
 
+            //Przetwarzanie odpowiedzi
             if (reply->error() == QNetworkReply::NoError) {
                 QByteArray responseData = reply->readAll();
                 jsonResponse = QJsonDocument::fromJson(responseData);

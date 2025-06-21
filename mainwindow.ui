@@ -37,21 +37,21 @@
        </item>
        <item>
         <widget class="QComboBox" name="sensorComboBox">
-         <property name="placeholderText">
-          <string>Wybierz czujnik...</string>
-         </property>
          <property name="enabled">
           <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Wybierz czujnik...</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="fetchDataButton">
-         <property name="text">
-          <string>Pobierz dane pomiarowe</string>
-         </property>
          <property name="enabled">
           <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Pobierz dane pomiarowe</string>
          </property>
         </widget>
        </item>
@@ -66,31 +66,31 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QPushButton" name="saveDataButton">
-         <property name="text">
-          <string>Zapisz dane</string>
-         </property>
          <property name="enabled">
           <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Zapisz dane</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="showChartButton">
-         <property name="text">
-          <string>Pokaż wykres</string>
-         </property>
          <property name="enabled">
           <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Pokaż wykres</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="analyzeButton">
-         <property name="text">
-          <string>Analizuj dane</string>
-         </property>
          <property name="enabled">
           <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Analizuj dane</string>
          </property>
         </widget>
        </item>
@@ -99,14 +99,14 @@
     </item>
     <item>
      <widget class="QLabel" name="statusLabel">
+      <property name="styleSheet">
+       <string notr="true">font-weight: bold; color: #2c3e50;</string>
+      </property>
       <property name="text">
        <string>Gotowy do pracy</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font-weight: bold; color: #2c3e50;</string>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </item>
@@ -122,6 +122,5 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
- </connections>
+ <connections/>
 </ui>

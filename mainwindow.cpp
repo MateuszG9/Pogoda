@@ -150,7 +150,7 @@ void MainWindow::onShowChartClicked()
     }
 
     showChart(currentData.values,
-              tr("Wykres dla %1 (%2)").arg(currentData.parameterName).arg(currentData.parameterCode));
+              tr("Wykres dla %1 (%2)").arg(currentData.parameterName, currentData.parameterCode));
 }
 
 void MainWindow::onAnalyzeDataClicked()
